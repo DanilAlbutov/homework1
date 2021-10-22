@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,8 +24,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="xa0-Sw-4fj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jg-Fs-Vyu">
-                                <rect key="frame" x="157" y="214" width="100" height="100"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jg-Fs-Vyu">
+                                <rect key="frame" x="157" y="321" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93333339689999995" green="0.48235297199999999" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="13K-s5-ouX"/>
@@ -33,11 +34,14 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+">
-                                    <fontDescription key="titleFontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="50"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="70"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rk-tT-Isk"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8l-z3-Xwf">
-                                <rect key="frame" x="157" y="339" width="100" height="100"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8l-z3-Xwf">
+                                <rect key="frame" x="157" y="446" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93333339689999995" green="0.48235297199999999" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ZLZ-q5-SZw"/>
@@ -46,11 +50,14 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="clear">
-                                    <fontDescription key="titleFontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="27"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="35"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2K-nd-W9y"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1Z-f4-WrK">
-                                <rect key="frame" x="157" y="464" width="100" height="100"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1Z-f4-WrK">
+                                <rect key="frame" x="157" y="571" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93333339689999995" green="0.48235297199999999" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="a0y-az-H69"/>
@@ -59,9 +66,22 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-">
-                                    <fontDescription key="titleFontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="50"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="70"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ls-OW-w7r"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-UQ-6sR">
+                                <rect key="frame" x="157" y="226" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QIP-CR-4zr"/>
+                                    <constraint firstAttribute="width" constant="100" id="xHk-bv-Oal"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.93333339689999995" green="0.48235297199999999" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,13 +89,22 @@
                             <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="centerX" secondItem="JCu-uA-3FP" secondAttribute="centerX" id="1RZ-4l-4J7"/>
                             <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="leading" secondItem="e8l-z3-Xwf" secondAttribute="leading" id="2uQ-mU-0i8"/>
                             <constraint firstItem="JCu-uA-3FP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D9A-mu-oZY"/>
-                            <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="214" id="HJI-Ao-X6Q"/>
+                            <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="321" id="HJI-Ao-X6Q"/>
+                            <constraint firstItem="LDj-UQ-6sR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="HMb-cv-FR2"/>
                             <constraint firstItem="k1Z-f4-WrK" firstAttribute="leading" secondItem="e8l-z3-Xwf" secondAttribute="leading" id="K8z-dT-i3U"/>
                             <constraint firstItem="e8l-z3-Xwf" firstAttribute="top" secondItem="5Jg-Fs-Vyu" secondAttribute="bottom" constant="25" id="bwk-0W-lIC"/>
                             <constraint firstItem="k1Z-f4-WrK" firstAttribute="top" secondItem="e8l-z3-Xwf" secondAttribute="bottom" constant="25" id="gUe-JV-9Xh"/>
-                            <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="top" secondItem="JCu-uA-3FP" secondAttribute="bottom" constant="10" id="wWR-ZL-kmn"/>
+                            <constraint firstItem="LDj-UQ-6sR" firstAttribute="centerX" secondItem="JCu-uA-3FP" secondAttribute="centerX" id="gc5-FK-cyC"/>
+                            <constraint firstItem="LDj-UQ-6sR" firstAttribute="centerX" secondItem="JCu-uA-3FP" secondAttribute="centerX" id="hBg-kD-b1d"/>
+                            <constraint firstItem="5Jg-Fs-Vyu" firstAttribute="top" secondItem="JCu-uA-3FP" secondAttribute="bottom" constant="117" id="wWR-ZL-kmn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="LDj-UQ-6sR" id="WDc-Jq-jru"/>
+                        <outletCollection property="buttons" destination="5Jg-Fs-Vyu" collectionClass="NSMutableArray" id="xe7-9M-Nan"/>
+                        <outletCollection property="buttons" destination="e8l-z3-Xwf" collectionClass="NSMutableArray" id="g5z-tR-sA3"/>
+                        <outletCollection property="buttons" destination="k1Z-f4-WrK" collectionClass="NSMutableArray" id="JOB-sv-GlH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
