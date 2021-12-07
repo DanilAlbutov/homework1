@@ -58,7 +58,6 @@ class ViewController: UIViewController {
             buttons[0].isEnabled = true
             buttons[2].isEnabled = true
         }
-    }
-    
+    }    
 }
 
