@@ -10,4 +10,5 @@ privet mir
 
 poka erlo
 :wq
+it is a new conflict file
 
